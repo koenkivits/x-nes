@@ -1,0 +1,30 @@
+script
+	include ../dist/x-nes.js
+
+template
+	style
+		include ./x-nes.css
+	div.nes-wrapper
+		canvas(width=256, height=224)
+		div.nes-controls
+			div.nes-main-controls
+				button.nes-play
+					include ./icons/icon-play.svg
+				button.nes-pause
+					include ./icons/icon-pause.svg
+			div.nes-secondary-controls
+				button.nes-audio-enable
+					include ./icons/icon-muted.svg
+				button.nes-audio-disable
+					include ./icons/icon-volume.svg
+				input.nes-volume(
+					type="range",
+					min=0,
+					max=10,
+					step=0.5,
+					value=10
+				)
+				button.nes-fullscreen-enter
+					include ./icons/icon-enter-fullscreen.svg
+				button.nes-fullscreen-exit
+					include ./icons/icon-exit-fullscreen.svg

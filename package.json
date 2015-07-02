@@ -1,0 +1,24 @@
+{
+  "name": "nesnes",
+  "version": "0.1.0",
+  "description": "A NES emulator web component.",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "jade": "^1.11.0",
+    "jshint": "^2.8.0"
+  },
+  "keywords": [
+    "nesnes",
+    "nes",
+    "emulator",
+    "webcomponent"
+  ],
+  "author": "Koen Kivits",
+  "license": "MIT"
+}

@@ -1,7 +1,10 @@
-all: x-nes
+all: x-nes.html
 
-x-nes: lint dist
-	node_modules/.bin/browserify -o dist/x-nes.js ./src/x-nes.js && node_modules/.bin/jade -o dist ./src/x-nes.jade
+x-nes.html: x-nes.js dist
+	node_modules/.bin/jade -o dist ./src/x-nes.jade
+
+x-nes.js: lint dist
+	node_modules/.bin/browserify -o dist/x-nes.js ./src/x-nes.js
 
 dist:
 	mkdir -p dist

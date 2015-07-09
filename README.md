@@ -50,3 +50,7 @@ This will create ``x-nes.html`` in the ``dist/`` directory.
 ## My game favorite game doesn't work!
 
 ``&lt;x-nes&gt;`` is built on NESNES. If you find any problems, please file an issue there.
+
+## Icon credits
+
+The icons were borrowed from the [plyr HTML5 media player]. Do check it out!

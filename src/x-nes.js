@@ -323,17 +323,15 @@ function initEvents( el ) {
 	 */
 	if ( fullscreen.event ) {
 		document.addEventListener( fullscreen.event, function() {
-			var rawEl = el;
-			// Shadow DOM polyfill messes with fullscreen detection
-			if ( typeof ShadowDOMPolyfill !== "undefined" ) {
-				rawEl = ShadowDOMPolyfill.unwrap( rawEl );
-			}
-
 			toggleClassName(
 				el,
 				"nes-fullscreen",
-				( document[ fullscreen.element ] === rawEl )
+				isFullscreen( el )
 			);
+		});
+
+		window.addEventListener( "resize", function() {
+			scaleCanvas( el );
 		});
 	}
 
@@ -345,6 +343,24 @@ function initEvents( el ) {
 			callback.call( el, e );
 		};
 	}
+}
+
+/**
+ * Check if an element is the fullscreen element.
+ */
+function isFullscreen( el ) {
+	return ( document[ fullscreen.element ] === unwrap(el) );
+}
+
+/**
+ * Get a raw DOM element, regardless of Web Component polyfill.
+ */
+function unwrap( el ) {
+	if ( typeof ShadowDOMPolyfill !== "undefined" ) {
+		return ShadowDOMPolyfill.unwrap( el );
+	}
+
+	return el;
 }
 
 /**
@@ -361,6 +377,39 @@ function initMouseTimeout( el ) {
 
 		toggleClassName( el, "nes-mouse-inactive", false );
 	});
+}
+
+
+/**
+ * Scale x-nes canvas to fit screen.
+ * Could be done in pure CSS (using object-fit), but using CSS transforms gives us\
+ * better canvas performance.
+ */
+function scaleCanvas( el ) {
+	var canvas = el.shadowRoot.querySelector( "canvas" ),
+		style = canvas.style,
+		dx = window.innerWidth / canvas.offsetWidth,
+		dy = window.innerHeight / canvas.offsetHeight,
+		scale = Math.min( dx, dy ),
+		value = "scale(" + scale + ")";
+
+	if ( isFullscreen( el ) ) {
+		transform( canvas, value );
+	} else {
+		transform( canvas, null );
+	}
+}
+
+/**
+ * Transform an element with cross-browser support.
+ */
+function transform( el, value ) {
+	var style = el.style;
+
+	style.transform = value;
+	style.webkitTransform = value;
+	style.oTransform = value;
+	style.msTransform = value;
 }
 
 /**

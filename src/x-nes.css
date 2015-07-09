@@ -44,6 +44,15 @@
 	top: 0;
 }
 
+.nes-fullscreen canvas {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	margin-left: -128px;
+	margin-top: -112px;
+}
+
 /**
  * Emulator video output should always scale to dimensions of parent, 
  * while retaining aspect ratio.

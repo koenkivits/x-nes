@@ -175,6 +175,8 @@ nesPrototype.createdCallback = function() {
 	initAttributes( this );
 	initMouseTimeout( this );
 
+	toggleClassName( this, "nes-inactive", true );
+
 	if ( this.autoplay ) {
 		this.play();
 	} else if ( this.preload === "auto" ) {
@@ -198,6 +200,8 @@ nesPrototype.attributeChangedCallback = function( name, oldValue, newValue, name
 */
 nesPrototype.play = function() {
 	if ( this.played ) {
+		toggleClassName( this, "nes-inactive", false );
+
 		this.nesnes.play();
 		togglePlaying( this );
 	} else {

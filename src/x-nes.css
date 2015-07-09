@@ -81,7 +81,8 @@
  * Should controls on hover or if emulator is paused.
  */
 .nes-wrapper:hover .nes-controls,
-.nes-paused .nes-controls {
+.nes-paused .nes-controls,
+.nes-inactive .nes-controls {
 	transform: translateY(0);
 }
 

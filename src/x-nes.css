@@ -169,6 +169,13 @@ button:hover path {
 	display: none;
 }
 
+.nes-no-fullscreen .nes-fullscreen-exit {
+	display: none;
+}
+.nes-no-fullscreen .nes-fullscreen-enter {
+	display: none;
+}
+
 /**
  * Toggle enable/disable sound buttons visibility depending on state.
  */

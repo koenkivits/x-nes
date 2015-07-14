@@ -283,6 +283,7 @@ function initShadowRoot( el ) {
 
 	// set a class for when fullscreen is not available at all
 	toggleClassName( el, "nes-no-fullscreen", !fullscreen.request );
+	toggleClassName( el, "nes-no-audio", typeof AudioContext === "undefined" );
 
 	el.nesnes = new NesNes( root.querySelector("canvas") );
 }

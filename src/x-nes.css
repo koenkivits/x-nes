@@ -169,13 +169,6 @@ button:hover path {
 	display: none;
 }
 
-.nes-no-fullscreen .nes-fullscreen-exit {
-	display: none;
-}
-.nes-no-fullscreen .nes-fullscreen-enter {
-	display: none;
-}
-
 /**
  * Toggle enable/disable sound buttons visibility depending on state.
  */
@@ -296,4 +289,12 @@ input[type=range]::-ms-thumb {
 }
 input[type=range]:focus::-ms-thumb {
 	background: #3498db;
+}
+
+.nes-no-fullscreen .nes-fullscreen-exit,
+.nes-no-fullscreen .nes-fullscreen-enter,
+.nes-no-audio .nes-audio-enable,
+.nes-no-audio .nes-audio-disable,
+.nes-no-audio .nes-volume {
+	display: none;
 }

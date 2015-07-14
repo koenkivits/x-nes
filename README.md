@@ -1,12 +1,12 @@
 # &lt;x-nes&gt;
 
-You once had a NES in your home, now you can have one on your web page. ``&lt;x-nes&gt;`` is the web component you didn't know you needed.
+You once had a NES in your home, now you can have one on your web page. ``<x-nes>`` is the web component you didn't know you needed.
 
 [![x-nes screenshot](http://koen.kivits.com/x-nes/screenshot.png)](http://koen.kivits.com/x-nes)
 
 ## Installation
 
-``&lt;x-nes&gt;`` can be installed through npm:
+``<x-nes>`` can be installed through npm:
 
 ```
 npm install x-nes
@@ -14,12 +14,12 @@ npm install x-nes
 
 ## Usage
 
-Using ``&lt;x-nes&gt;`` is easy. Simply import a piece of HTML and then start using the tag:
+Using ``<x-nes>`` is easy. Simply import a piece of HTML and then start using the tag:
 
 ```html
-&lt;link rel="import" href="./node_modules/x-nes/dist/x-nes.html"&gt;
+<link rel="import" href="./node_modules/x-nes/dist/x-nes.html">
 
-&lt;x-nes src="./roms/supermario.nes"&gt;
+<x-nes src="./roms/supermario.nes">
 ```
 
 See [the demo](http://koen.kivits.com/x-nes/) for an example.
@@ -36,11 +36,11 @@ The following attributes are supported:
 
 ## Browser support
 
-``&lt;x-nes&gt;`` works in Chrome and Opera without any dependencies. Other modern browsers require the [webcomponent.js polyfill](http://webcomponents.org/) (the most recent versions of IE and Firefox have been tested).
+``<x-nes>`` works in Chrome and Opera without any dependencies. Other modern browsers require the [webcomponent.js polyfill](http://webcomponents.org/) (the most recent versions of IE and Firefox have been tested).
 
 ## Build it yourself
 
-``&lt;x-nes&gt; can be built by installing the dependencies, then running make:
+``<x-nes>`` can be built by installing the dependencies, then running make:
 
 ```
 npm install
@@ -51,8 +51,8 @@ This will create ``x-nes.html`` in the ``dist/`` directory.
 
 ## My game favorite game doesn't work!
 
-``&lt;x-nes&gt;`` is built on NESNES. If you find any problems, please file an issue there.
+``<x-nes>`` is built on NESNES. If you find any problems, please file an issue [there](https://github.com/koenkivits/nesnes).
 
 ## Icon credits
 
-The icons were borrowed from the [plyr HTML5 media player]. Do check it out!
+The icons were borrowed from the [plyr HTML5 media player](https://github.com/selz/plyr). Do check it out!

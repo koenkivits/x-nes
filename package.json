@@ -1,5 +1,5 @@
 {
-  "name": "nesnes",
+  "name": "x-nes",
   "version": "0.1.0",
   "description": "A NES emulator web component.",
   "main": "main.js",
@@ -13,12 +13,16 @@
     "jshint": "^2.8.0",
     "uglifyjs": "^2.4.10"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/koenkivits/x-nes.git"
+  },
   "keywords": [
     "nesnes",
     "nes",
     "emulator",
-    "webcomponent"
+    "web-components"
   ],
-  "author": "Koen Kivits",
+  "author": "Koen Kivits <koen@kivits.com> (http://koen.kivits.com/)",
   "license": "MIT"
 }

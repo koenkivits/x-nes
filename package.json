@@ -6,12 +6,12 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "browserify": "^9.0.8",
     "jade": "^1.11.0",
-    "jshint": "^2.8.0"
+    "jshint": "^2.8.0",
+    "uglifyjs": "^2.4.10"
   },
   "keywords": [
     "nesnes",

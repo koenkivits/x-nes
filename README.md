@@ -27,7 +27,7 @@ See [the demo](http://koen.kivits.com/x-nes/) for an example.
 The following attributes are supported:
 
 | Name          | type              | Description
--------------------------------------------------
+|---------------|-------------------|------------
 | autoplay      | boolean           | If ``true``, ROM will automatically load and play.
 | muted         | boolean           | If ``true``, sound will be disabled.
 | preload       | "none" or "auto"  | If "auto", ROM will be preloaded (but not played).

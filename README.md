@@ -1,6 +1,8 @@
 # &lt;x-nes&gt;
 
-``&lt;x-nes&gt;`` is the NES emulator web component your website needs.
+You once had a NES in your home, now you can have one on your web page. ``&lt;x-nes&gt;`` is the web component you didn't know you needed.
+
+[![x-nes screenshot](http://koen.kivits.com/x-nes/screenshot.png)](http://koen.kivits.com/x-nes)
 
 ## Installation
 
@@ -20,7 +22,7 @@ Using ``&lt;x-nes&gt;`` is easy. Simply import a piece of HTML and then start us
 &lt;x-nes src="./roms/supermario.nes"&gt;
 ```
 
-See [this page](http://koen.kivits.com/x-nes/) for examples.
+See [the demo](http://koen.kivits.com/x-nes/) for an example.
 
 The following attributes are supported:
 
@@ -34,7 +36,7 @@ The following attributes are supported:
 
 ## Browser support
 
-``&lt;x-nes&gt;`` works in Chrome and Opera without any dependencies. Other modern browsers require the [webcomponent.js polyfill](http://webcomponents.org/).
+``&lt;x-nes&gt;`` works in Chrome and Opera without any dependencies. Other modern browsers require the [webcomponent.js polyfill](http://webcomponents.org/) (the most recent versions of IE and Firefox have been tested).
 
 ## Build it yourself
 

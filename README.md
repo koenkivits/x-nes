@@ -6,10 +6,11 @@ You once had a NES in your home, now you can have one on your web page. ``<x-nes
 
 ## Installation
 
-``<x-nes>`` can be installed through npm:
+``<x-nes>`` can be installed through npm or bower:
 
 ```
 npm install x-nes
+bower install x-nes
 ```
 
 ## Usage

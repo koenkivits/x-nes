@@ -57,6 +57,23 @@ play&&self.play(),toggleClassName(self,"nes-loading",!1)})},document.registerEle
 }
 
 /**
+ * Check if the browser supports pixelated image-rendering
+ */
+@supports not (image-rendering: pixelated) {
+	.nes-fullscreen canvas {
+		image-rendering: -moz-crisp-edges;
+		image-rendering: -webkit-crisp-edges;
+		image-rendering: crisp-edges
+	}
+}
+
+@supports (image-rendering: pixelated) {
+	.nes-fullscreen canvas {
+		image-rendering: pixelated
+	}
+}
+
+/**
  * Emulator video output should always scale to dimensions of parent, 
  * while retaining aspect ratio.
  */
@@ -300,7 +317,8 @@ input[type=range]:focus::-ms-thumb {
 .nes-no-audio .nes-audio-disable,
 .nes-no-audio .nes-volume {
 	display: none;
-}</style><div class="nes-wrapper"><canvas width="256" height="224"></canvas><div class="nes-controls"><div class="nes-main-controls"><button class="nes-play"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+}
+</style><div class="nes-wrapper"><canvas width="256" height="224"></canvas><div class="nes-controls"><div class="nes-main-controls"><button class="nes-play"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
 <path d="M5 4.914l6.915 4.086-6.915 4.086v-8.172zM4 2c-0.552 0-1 0.448-1 1v12c0 0.552 0.448 1 1 1l10.569-6.246c0.267-0.158 0.431-0.444 0.431-0.754s-0.164-0.597-0.431-0.754l-10.569-6.246z"></path>
 </svg>
 </button><button class="nes-pause"><svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">

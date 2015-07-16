@@ -1,6 +1,6 @@
 {
   "name": "x-nes",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A NES emulator web component.",
   "main": "main.js",
   "directories": {

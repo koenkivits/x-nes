@@ -1,12 +1,14 @@
 {
   "name": "x-nes",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A NES emulator web component.",
   "main": "main.js",
   "directories": {
     "test": "tests"
   },
-  "dependencies": {},
+  "dependencies": {
+    "nesnes": "^0.1.1"
+  },
   "devDependencies": {
     "browserify": "^9.0.8",
     "jade": "^1.11.0",
@@ -14,8 +16,8 @@
     "uglifyjs": "^2.4.10"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/koenkivits/x-nes.git"
+    "type": "git",
+    "url": "https://github.com/koenkivits/x-nes.git"
   },
   "keywords": [
     "nesnes",

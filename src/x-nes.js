@@ -333,6 +333,10 @@ function initEvents( el ) {
 				"nes-fullscreen",
 				isFullscreen( el )
 			);
+
+			// 'resize' event isn't enough for Chrome when document is
+			// already fullscreen
+			scaleCanvas( el );
 		});
 
 		window.addEventListener( "resize", function() {

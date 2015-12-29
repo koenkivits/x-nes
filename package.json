@@ -19,6 +19,9 @@
     "type": "git",
     "url": "https://github.com/koenkivits/x-nes.git"
   },
+  "scripts": {
+    "prepublish": "make"
+  },
   "keywords": [
     "nesnes",
     "nes",

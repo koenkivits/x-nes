@@ -71,16 +71,6 @@
 }
 
 /**
- * Emulator video output should always scale to dimensions of parent, 
- * while retaining aspect ratio.
- */
-/*canvas {
-	width: 100% !important;
-	height: 100% !important;
-	object-fit: contain;
-}*/
-
-/**
  * Crontrol bar styling.
  */
 .nes-controls {

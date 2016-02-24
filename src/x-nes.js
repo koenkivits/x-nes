@@ -272,11 +272,7 @@ function initShadowRoot( el ) {
 	// it took me forever to find that this isn't done automatically, though there
 	// is a closed issue about it: https://github.com/webcomponents/webcomponentsjs/issues/140
 	if ( typeof WebComponents !== "undefined" && WebComponents.ShadowCSS ) {
-		WebComponents.ShadowCSS.shimStyling( template.content, "x-nes" );
-
-		// .. we need to remove the previous style element manually, too
-		var style = root.querySelector( "style" );
-		style.parentNode.removeChild( style );
+		WebComponents.ShadowCSS.shimStyling( root, "x-nes" );
 	}
 
 	initEvents( el );

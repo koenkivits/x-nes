@@ -45,14 +45,8 @@ var attributes = {
 	poster: {
 		change: function() {
 			if ( !this.nesnes.running ) {
-				var canvas = this.shadowRoot.querySelector( "canvas" ),
-				    ctx = canvas.getContext( "2d" ),
-				    img = new Image();
-
+				var img = this.shadowRoot.querySelector( ".nes-poster" );
 				img.src = this.getAttribute( "poster" );
-				img.onload = function() {
-					ctx.drawImage( img, 0, 0 );
-				};
 			}
 		}
 	},
@@ -124,6 +118,13 @@ var events = {
 		} else {
 			this.pause();
 		}
+	},
+
+	/**
+	 * Clicking on the poster should always trigger the emulator to start playing.
+	 */
+	"click .nes-poster": function() {
+		this.play();
 	},
 
 	/**
